@@ -1,3 +1,7 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.concurrent.atomic.AtomicInteger;
+
 public class DeadLock {
     public static  Object Lock1  = new Object();
     public static  Object Lock2  = new Object();
@@ -9,6 +13,8 @@ public class DeadLock {
         Thread t1 = new Thread(instance1);
         Thread t2 = new Thread(instance2);
         t1.start();
+        AtomicInteger atomic = new AtomicInteger(0);
+        atomic.getAndIncrement();
 
         t2.start();
     }
