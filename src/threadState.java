@@ -5,7 +5,6 @@ public class threadState {
 
     }
     static class TimeWaiting implements Runnable{
-
         @Override
         public void run() {
             while(true){
