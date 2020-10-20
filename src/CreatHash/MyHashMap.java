@@ -61,7 +61,6 @@ public class MyHashMap<K, V> implements MyMap<K, V>{
         if(e == null){
             return null;
         }
-
         // 遍历index处的链表找到key
         while(e != null){
             if(e.key == null && key == null || hash(e.key) == hash(key) && e.key.equals(key)){
@@ -78,7 +77,6 @@ public class MyHashMap<K, V> implements MyMap<K, V>{
         V value;
         Entry<K, V> next;
         int index;  // 记录下标
-
         Entry(K key, V val, Entry<K, V> next, int index){
             this.key = key;
             this.value = val;
