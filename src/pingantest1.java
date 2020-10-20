@@ -27,6 +27,6 @@ for(int i = 0;i<index;i++){
         Arrays.sort(res);
 for(int i = index-1;i>=0;i--){
     System.out.println(res[i]+" ");
-}
+        }
     }
 }

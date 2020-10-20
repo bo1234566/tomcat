@@ -24,14 +24,14 @@ public class ClassLoaderTest {
                  }
              }
          };
-         String className = "com.company.ClassLoaderTest";
-         Object o1 = ClassLoaderTest.class.getClassLoader().loadClass(className).newInstance();
-         Object o2 = loader.loadClass(className).newInstance();
+        String className = "com.company.ClassLoaderTest";
+        Object o1 = ClassLoaderTest.class.getClassLoader().loadClass(className).newInstance();
+        Object o2 = loader.loadClass(className).newInstance();
         System.out.println(o1.getClass().getClassLoader());
         System.out.println(o2.getClass().getClassLoader());
-         System.out.println(o1.equals(o2));
-        System.out.println(o1 instanceof com.company.ClassLoaderTest);
-        System.out.println(o2 instanceof com.company.ClassLoaderTest);
+        System.out.println(o1.equals(o2));
+        System.out.println(o1 instanceof ClassLoaderTest);
+        System.out.println(o2 instanceof ClassLoaderTest);
         System.out.println(o2 instanceof ClassLoaderTest);
     }
 }
